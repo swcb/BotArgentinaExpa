@@ -1,0 +1,27 @@
+import psycopg2.extras
+from controller import RobotRotine as rr
+from api import graphqlconsume, querygraphql
+import time
+import datetime
+import numpy as np
+import schedule 
+
+def job():
+    robo2 = rr.RobotRotine()
+    dtfim = np.datetime64(datetime.datetime.now())
+    dtinit = np.datetime64(dtfim) - np.timedelta64(90, 'm')
+    print('Função Approved')
+    print(dtinit)
+    print(dtfim)
+    print('-')
+    robo2.ExecutaRotina('date_approved', dtinit,
+                            dtfim, 1) #Tipo de data,Data inicio,datafim,numero da pagina
+    print('Periodo Executado com sucesso')
+
+
+schedule.every(60).minutes.do(job)
+print('Esperando o proximo intervalo para executar.......')
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)

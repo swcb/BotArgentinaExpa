@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Script para inicializar todos os bots.
+
+pm2 start _get_approved_.py --interpreter python3 -f
