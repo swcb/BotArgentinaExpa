@@ -1,3 +1,6 @@
+import sys
+sys.path.append("../..")
+
 import psycopg2.extras
 from controller import RobotRotine as rr
 from api import graphqlconsume, querygraphql
@@ -8,8 +11,8 @@ import numpy as np
 
 robo5 = rr.RobotRotine()
 i = 0
-dtinit = '2019-11-01T00:00:00.00000'
-while i < 15:
+dtinit = '2019-12-01T00:00:00.00000'
+while i < 31:
     print(dtinit)
     try:
         dtfim = np.datetime64(dtinit) + np.timedelta64(24, 'h')
