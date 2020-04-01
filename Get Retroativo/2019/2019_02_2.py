@@ -26,7 +26,7 @@ while i < 28:
         robo5.ExecutaRotina('date_matched', dtinit,
                         dtfim, 1)
         i = i+1
-        dtinit = np.datetime64(dtinit) + np.timedelta64i(24, 'h')
+        dtinit = np.datetime64(dtinit) + np.timedelta64(24, 'h')
     except:
         print('deu erro')
 
