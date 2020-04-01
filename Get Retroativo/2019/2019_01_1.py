@@ -18,7 +18,7 @@ print('-')
 """
 robo5 = rr.RobotRotine()
 i = 0
-dtinit = '2019-01-01T00:00:00'
+dtinit = '2019-01-01T00:00:00.00000'
 while i < 31:
     print(dtinit)
     try:
@@ -27,7 +27,7 @@ while i < 31:
                         dtfim, 1)
         i = i+1
         dtinit = np.datetime64(dtinit) + np.timedelta64(24, 'h')
-    except:
-        print('deu erro')
+    except Exception as err:
+        print(err)
 
 print('Periodo Executado com sucesso')
