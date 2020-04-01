@@ -1,5 +1,5 @@
 import sys
-sys.path.append("../../")
+sys.path.append("../..")
 
 import psycopg2.extras
 from controller import RobotRotine as rr
@@ -18,13 +18,16 @@ print('-')
 """
 robo5 = rr.RobotRotine()
 i = 0
-dtinit = '2020-03-01T00:00:00'
+dtinit = '2019-01-01T00:00:00'
 while i < 31:
     print(dtinit)
-    dtfim = np.datetime64(dtinit) + np.timedelta64(24, 'h')
-    robo5.ExecutaRotina('date_matched', dtinit,
+    try:
+        dtfim = np.datetime64(dtinit) + np.timedelta64(24, 'h')
+        robo5.ExecutaRotina('created_at', dtinit,
                         dtfim, 1)
-    i = i+1
-    dtinit = np.datetime64(dtinit) + np.timedelta64(24, 'h')
+        i = i+1
+        dtinit = np.datetime64(dtinit) + np.timedelta64i(24, 'h')
+    except:
+        print('deu erro')
 
 print('Periodo Executado com sucesso')
