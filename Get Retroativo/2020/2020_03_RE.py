@@ -1,5 +1,6 @@
+
 import sys
-sys.path.append("..")
+sys.path.append("../../")
 
 import psycopg2.extras
 from controller import RobotRotine as rr
@@ -19,7 +20,7 @@ print('-')
 robo5 = rr.RobotRotine()
 i = 0
 dtinit = '2020-03-01T00:00:00'
-while i < 20:
+while i < 21:
     print(dtinit)
     dtfim = np.datetime64(dtinit) + np.timedelta64(24, 'h')
     robo5.ExecutaRotina('date_realized', dtinit,

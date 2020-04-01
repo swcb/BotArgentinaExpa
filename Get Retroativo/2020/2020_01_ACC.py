@@ -1,5 +1,5 @@
 import sys
-sys.path.append("..")
+sys.path.append("../..")
 
 import psycopg2.extras
 from controller import RobotRotine as rr
