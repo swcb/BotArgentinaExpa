@@ -27,7 +27,7 @@ while i < 30:
                         dtfim, 1)
         i = i+1
         dtinit = np.datetime64(dtinit) + np.timedelta64(24, 'h')
-    except:
-        print('deu erro')
+    except Exception as err:
+        print(err)
 
 print('Periodo Executado com sucesso')
