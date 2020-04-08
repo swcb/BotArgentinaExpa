@@ -18,7 +18,7 @@ print('-')
 """
 robo2 = rr.RobotRotine()
 i = 0
-dtinit = '2019-11-01T00:00:00'
+dtinit = '2019-11-01T00:00:00.00000'
 while i < 30:
     print(dtinit)
     try:
