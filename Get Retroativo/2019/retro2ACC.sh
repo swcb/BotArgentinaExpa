@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# Script para pegar os approveds dados em 2019.
+# Script para pegar os dados de ACC em 2019.
 
 echo "Obtendo approveds de 2019"
-
-#!/bin/bash
 
 # Script teste.
 
